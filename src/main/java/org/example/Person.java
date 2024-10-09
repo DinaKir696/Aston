@@ -8,16 +8,17 @@ public class Person {
     int salary;
     int age;
 
-    public Person(String _name, String _post, String _email, String _phone, int _salary, int _age){
-        name = _name;
-        post = _post;
-        email = _email;
-        phone = _phone;
-        salary = _salary;
-        age = _age;
+    public Person(String name, String post, String email, String phone, int salary, int age){
+        this.name = name;
+        this.post = post;
+        this.email = email;
+        this.phone = phone;
+        this.salary = salary;
+        this.age = age;
     }
 
      public void info(){
-        System.out.println("Информация о сотруднике: ФИО - " + name + ", должность - " + post + ", email - " + email + ", телефон - " + phone + ", зарплата - " + salary + ", возраст - " + age);
+         System.out.println(String.format("Информация о сотруднике: ФИО - %s, должность - %s, email - %s, телефон - %s, зарплата - %s, возраст - %s",
+                 name, post, email, phone, salary, age));
     }
 }
